@@ -1,0 +1,65 @@
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Upload Image</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('dark-theme.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .upload-container {
+        text-align: center;
+    }
+    .upload-btn {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    .upload-btn:hover {
+        background-color: #0056b3;
+    }
+    #file-input {
+        display: none;
+    }
+    #file-label {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #780814; 
+        color: #fff; 
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    #upload-label {
+        color: #fff; 
+    }
+</style>
+</head>
+<body>
+<div class="upload-container">
+    <h1 id="upload-label">Upload Image</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file-input" id="file-label">Choose File</label>
+        <input type="file" id="file-input" name="file" accept="image/*">
+        <button type="submit" class="upload-btn">Upload</button>
+    </form>
+</div>
+</body>
+</html>
